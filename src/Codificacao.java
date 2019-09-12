@@ -4,13 +4,16 @@ public class Codificacao {
 
     static String code(String codigo, String key){
 
+        int aux = 0;
+
         codigo = codigo.replace(" ","");
 
         if (codigo.length() % key.length() != 0){
             codigo = complete(codigo, key.length() - (codigo.length() % key.length()));
         }
 
-        String[][] matriz = setMatriz(codigo, key);
+        String[][] matriz = setMatriz(codigo, key.length());
+
 
         return null;
     }
@@ -27,25 +30,21 @@ public class Codificacao {
         return palavraParaCompletar;
     }
 
-    private static String[][] setMatriz(String codigo, String key){
+    private static String[][] setMatriz(String codigo, int keyLengh){
 
-        int linha = codigo.length()/key.length();
+        int linha = codigo.length()/keyLengh;
 
-        String[][] matriz = new String[linha][key.length()];
+        String[][] matriz = new String[linha][keyLengh];
+
         int aux = 0;
 
-        for (int i = 0; i < key.length(); i++){
-            for (int j = 0; j < key.length(); j++) {
-                if (aux != codigo.length()) {
-                    matriz[i][j] = String.valueOf(codigo.charAt(aux));
-                    aux++;
-                }else {
-                    break;
-                }
+        for (int i = 0; i < linha; i++) {
+            for (int j = 0; j < keyLengh; j++) {
+                matriz[i][j] = String.valueOf(codigo.charAt(aux));
+                aux++;
             }
         }
-
-        return null;
+        return matriz;
     }
 
 }
