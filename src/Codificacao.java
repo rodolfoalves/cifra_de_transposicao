@@ -1,12 +1,17 @@
+import java.util.ArrayList;
+
 public class Codificacao {
 
     public Codificacao(){}
 
     static String code(String codigo, String key){
 
-        int aux = 0;
+        int aux1 = 0;
 
         codigo = codigo.replace(" ","");
+        String palavraCodificada = new String("");
+        ArrayList<String> aux = new ArrayList<String>(); // Create an ArrayList object
+
 
         if (codigo.length() % key.length() != 0){
             codigo = complete(codigo, key.length() - (codigo.length() % key.length()));
@@ -14,6 +19,48 @@ public class Codificacao {
 
         String[][] matriz = setMatriz(codigo, key.length());
 
+        for (int i = 0; i < key.length(); i++) {
+            for (int j = 0; j < codigo.length()/key.length(); j++) {
+            aux.add(matriz[j][i]);
+            }
+        }
+
+
+
+
+//        for (int i = 0; i < codigo.length()/key.length(); i++) {
+//            System.out.print("\n");
+//            for (int j = 0; j < key.length(); j++) {
+//                System.out.print(matriz[i][j] +" ");
+//            }
+//        }
+
+//        for (int i = 0; i < key.length(); i++) {
+//            for (int j = 0; j < codigo.length()/key.length(); j++) {
+//                aux.add(matriz[j][i]);
+//            }
+//        }
+
+
+//        do {
+//            for (int i = 0; i < key.length(); i++) {
+//                for (int j = 0; j < codigo.length()/key.length(); j++) {
+//                    if (key.charAt(i) == j){
+//                        for (int k = 0; k < codigo.length()/key.length();k++){
+//                            System.out.println(matriz[k][key.charAt(i)]);
+//                            palavraCodificada.concat(matriz[k][key.charAt(i)]);
+//                        }
+//                        aux1++;
+//                    }else {
+//                        System.out.println("erroElse");
+//                    }
+//
+//                    System.out.println("erroforDentro");
+//                }
+//
+//                System.out.println("erroforFora");
+//            }
+//        }while (aux1 != key.length());
 
         return null;
     }

@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a7f1897-966a-4007-b650-527b8e81d5c8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/cifra_de_transposição/Codificacao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cifra_de_transposição/Codificacao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Codificacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Codificacao.java" afterDir="false" />
@@ -68,7 +67,12 @@
       <updated>1568250557943</updated>
       <workItem from="1568250561539" duration="10899000" />
       <workItem from="1568295489355" duration="3995000" />
-      <workItem from="1568316208941" duration="1433000" />
+      <workItem from="1568316208941" duration="2372000" />
+      <workItem from="1568580350855" duration="456000" />
+      <workItem from="1568598201803" duration="630000" />
+      <workItem from="1568641084787" duration="2037000" />
+      <workItem from="1568670747699" duration="3371000" />
+      <workItem from="1568779025554" duration="1577000" />
     </task>
     <servers />
   </component>
